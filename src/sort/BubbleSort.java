@@ -2,10 +2,10 @@ package sort;
 
 /**
  * @author nanmian
- * 选择排序：外层循环从0开始，内层循环从1开始，每次都找出最小的一个值进行交换
+ * 冒泡排序：每次都从头到尾选出最大的一个数
  */
-public class SelectionSort {
-
+public class BubbleSort {
+	
 	public static void sort(int[] arr) {
 		
 		if (arr == null || arr.length < 2) {
@@ -13,15 +13,12 @@ public class SelectionSort {
 		}
 		
 		int n = arr.length;
-		for (int pre = 0; pre < n - 1; pre++) {
-			int min = pre;
-			for (int next = pre + 1; next < n; next++) {
-				if (arr[next] < arr[min]) {
-					min = next;
+		for (int pre = 0; pre < n -1; pre++) {
+			for (int next = 0; next < n - pre - 1; next++) {
+				if (arr[next] > arr[next + 1]) {
+					swap(arr, next, next + 1);
 				}
 			}
-			
-			swap(arr, pre, min);
 		}
 		
 	}

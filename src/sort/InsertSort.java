@@ -2,9 +2,10 @@ package sort;
 
 /**
  * @author nanmian
- * 选择排序：外层循环从0开始，内层循环从1开始，每次都找出最小的一个值进行交换
+ * 插入排序：外循环从1开始，内循环往前面排好序的部分插入
  */
-public class SelectionSort {
+public class InsertSort {
+	
 
 	public static void sort(int[] arr) {
 		
@@ -13,15 +14,13 @@ public class SelectionSort {
 		}
 		
 		int n = arr.length;
-		for (int pre = 0; pre < n - 1; pre++) {
-			int min = pre;
-			for (int next = pre + 1; next < n; next++) {
-				if (arr[next] < arr[min]) {
-					min = next;
-				}
+		for (int pre = 1; pre < n; pre++) {
+			for (int next = pre; next - 1 >= 0 ; next--) {
+				if (arr[next] < arr[next - 1])
+					swap(arr, next, next - 1);
+				else
+					break;
 			}
-			
-			swap(arr, pre, min);
 		}
 		
 	}
@@ -58,4 +57,5 @@ public class SelectionSort {
 		
 	}
 	
+
 }

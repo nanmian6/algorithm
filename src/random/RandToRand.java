@@ -1,7 +1,5 @@
 package random;
 
-import java.util.Arrays;
-
 /**
  * @author nanmian
  *
