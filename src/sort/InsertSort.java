@@ -8,7 +8,7 @@ public class InsertSort {
 	
 
 	public static void sort(int[] arr) {
-		
+
 		if (arr == null || arr.length < 2) {
 			return;
 		}
@@ -16,10 +16,11 @@ public class InsertSort {
 		int n = arr.length;
 		for (int pre = 1; pre < n; pre++) {
 			for (int next = pre; next - 1 >= 0 ; next--) {
-				if (arr[next] < arr[next - 1])
+				if (arr[next] < arr[next - 1]) {
 					swap(arr, next, next - 1);
-				else
+				} else {
 					break;
+				}
 			}
 		}
 		
