@@ -68,11 +68,11 @@ public class HashMapAndTreeMap {
         // >=6 离6最近的key告诉我
         System.out.println(treeMap1.ceilingKey(6));
 
-        Node node3 = new Node(3);
-		Node node4 = new Node(4);
-		TreeMap<Node, String> treeMap2 = new TreeMap<>();
-		treeMap2.put(node3, "我是node3");
-		treeMap2.put(node4, "我是node4");
+//        Node node3 = new Node(3);
+//		Node node4 = new Node(4);
+//		TreeMap<Node, String> treeMap2 = new TreeMap<>();
+//		treeMap2.put(node3, "我是node3");
+//		treeMap2.put(node4, "我是node4");
     }
 
 }
