@@ -15,6 +15,7 @@ public class FindOddTimesTwoNums {
     }
 
     public static int[] printOddTimesNum2(int[] nums) {
+        // 同样先^一遍
         // 把这两种数a b的^结果求出来
         int eor = 0;
         for (int num : nums) {
