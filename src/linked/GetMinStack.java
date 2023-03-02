@@ -6,16 +6,16 @@ import java.util.Stack;
  * @author nanmian
  * 实现最小栈
  * 实现一个特殊的栈，在基本功能的基础上，再实现返回栈中最小元素的功能
- *
+ * <p>
  * 1）pop、push、getMin操作的时间复杂度都是 O(1)。
- *
+ * <p>
  * 2）设计的栈类型可以使用现成的栈结构。
  */
 public class GetMinStack {
 
-    public static class MyStack1{
-        private Stack<Integer> stackData;
-        private Stack<Integer> stackMin;
+    public static class MyStack1 {
+        private final Stack<Integer> stackData;
+        private final Stack<Integer> stackMin;
 
         public MyStack1() {
             this.stackData = new Stack<>();
@@ -51,9 +51,9 @@ public class GetMinStack {
     }
 
 
-    public static class MyStack2{
-        private Stack<Integer> stackData;
-        private Stack<Integer> stackMin;
+    public static class MyStack2 {
+        private final Stack<Integer> stackData;
+        private final Stack<Integer> stackMin;
 
         public MyStack2() {
             this.stackData = new Stack<>();
@@ -91,6 +91,8 @@ public class GetMinStack {
         MyStack1 stack1 = new MyStack1();
         stack1.push(3);
         System.out.println(stack1.getMin());
+        stack1.push(3);
+        System.out.println(stack1.getMin());
         stack1.push(4);
         System.out.println(stack1.getMin());
         stack1.push(1);
@@ -103,6 +105,8 @@ public class GetMinStack {
         MyStack1 stack2 = new MyStack1();
         stack2.push(3);
         System.out.println(stack2.getMin());
+        stack1.push(3);
+        System.out.println(stack1.getMin());
         stack2.push(4);
         System.out.println(stack2.getMin());
         stack2.push(1);

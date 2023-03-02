@@ -7,7 +7,7 @@ package linked;
 public class RingArray {
 
     public static class MyQueue {
-        private int[] arr;
+        private final int[] arr;
         private int pushI;
         private int pollI;
         private int size;
