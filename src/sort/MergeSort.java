@@ -35,17 +35,18 @@ public class MergeSort {
         while (mergeSize < n) {
             // 2.定义左组的起始位置
             int l = 0;
-            // 3.
+            // 3.l大于n的时候刚好走完
             while (l < n) {
                 // 如果左组凑不齐了直接跳过
                 if (mergeSize >= n - l) {
                     break;
                 }
-                // 中分位置
+                // 中分位置，l从0开始，所以要-1
                 int m = l + mergeSize - 1;
-                // 右组不够就把剩下的加上就行
+                // 右组不够就把剩下的加上就行，从0开始，所以要-1
                 int r = m + Math.min(mergeSize, n - m - 1);
                 merge(arr, l, m, r);
+                //继续往前走
                 l = r + 1;
             }
             // 防止溢出整数最大值
@@ -53,6 +54,7 @@ public class MergeSort {
                 break;
             }
 
+            // 每次*2
             mergeSize <<= 1;
         }
 
